@@ -1,0 +1,171 @@
+@mixin defaultDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  header {
+    width: 100%;
+    height: 700px;
+    background: url("../images/header/bg.png") no-repeat;
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      height: 110px;
+      margin: 0 auto;
+
+      .header-logo {
+        @include defaultDisplay;
+        justify-content: flex-start;
+        width: 25%;
+        height: inherit;
+
+        img {
+          height: 75px;
+          cursor: pointer;
+        }
+      }
+
+      .header-burger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+        height: inherit;
+
+        .header-request {
+          #btn-request {
+            width: 160px;
+            height: 40px;
+            border: 1px solid #1FAFFD;
+            text-transform: uppercase;
+            color: #1FAFFD;
+            background-color: #020814;
+            font-size: 13px;
+            cursor: pointer;
+          }
+        }
+
+        .burger-menu {
+          width: 37px;
+          cursor: pointer;
+
+          .menu-item {
+            width: inherit;
+            height: 3px;
+            margin: 6px 0;
+            background-color: #1FAFFD;
+          }
+        }
+      }
+    }
+
+    .header-container {
+      width: 75%;
+      height: 375px;
+      margin: 180px auto 0;
+
+      .header-text {
+        p {
+          margin: 15px 0;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      }
+
+      .header-project {
+        @include defaultDisplay;
+        justify-content: flex-start;
+        width: inherit;
+        height: 40px;
+        margin: 40px 0 27px;
+
+        #btn-project {
+          width: 210px;
+          height: 40px;
+          border: 1px solid #1FAFFD;
+          text-transform: uppercase;
+          color: #1FAFFD;
+          background-color: #020814;
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
+
+      .header-nav {
+        @include defaultDisplay;
+        justify-content: space-between;
+        width: 725px;
+        height: 20px;
+        margin: 53px 0 0;
+
+        p {
+          font-size: 17px;
+          color: #fff;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 75%;
+    margin: 0 auto;
+
+    .information {
+      @include defaultDisplay;
+      justify-content: space-between;
+      width: 100%;
+      padding: 60px 0;
+
+      &-item {
+        @include defaultDisplay;
+        flex-direction: column;
+        width: 30%;
+        height: 300px;
+
+        .information-image {
+          @include defaultDisplay;
+          width: 90%;
+          height: 150px;
+          margin: 0 auto;
+
+          img {
+            width: 40%;
+            height: 85%;
+          }
+        }
+        .information-header {
+          @include defaultDisplay;
+          width: 90%;
+          height: 20px;
+          margin: 10px auto;
+            h3 {
+              font-size: 20px;
+              text-transform: uppercase;
+            }
+        }
+        .information-desc {
+          width: 50%;
+          height: 190px;
+          margin: 0 auto;
+            p {
+              text-align: center;
+            }
+        }
+      }
+    }
+
+
+  }
+}
